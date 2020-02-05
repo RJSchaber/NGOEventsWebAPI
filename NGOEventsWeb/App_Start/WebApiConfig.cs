@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
@@ -19,6 +20,10 @@ namespace NGOEventsWeb
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            var jsonConfig = config.Formatters.JsonFormatter;
+            jsonConfig.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
+
         }
     }
 }
