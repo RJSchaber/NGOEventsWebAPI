@@ -45,18 +45,6 @@
     <Property Name="Role" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="UserID" Type="Int32" Nullable="false" />
   </EntityType>
-  <EntityType Name="UserNGO">
-    <Key>
-      <PropertyRef Name="UserID" />
-    </Key>
-    <Property Name="UserID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="token" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-  </EntityType>
   <Association Name="FK__EventRegi__Event__5535A963">
     <End Role="Events" Type="Self.Event" Multiplicity="1" />
     <End Role="EventRegistration" Type="Self.EventRegistration" Multiplicity="*" />
@@ -73,10 +61,22 @@
     <EntitySet Name="EventRegistrations" EntityType="Self.EventRegistration" />
     <EntitySet Name="Events" EntityType="Self.Event" />
     <EntitySet Name="UserMs" EntityType="Self.UserM" />
-    <EntitySet Name="UserNGOes" EntityType="Self.UserNGO" />
     <AssociationSet Name="FK__EventRegi__Event__5535A963" Association="Self.FK__EventRegi__Event__5535A963">
       <End Role="Events" EntitySet="Events" />
       <End Role="EventRegistration" EntitySet="EventRegistrations" />
     </AssociationSet>
+    <EntitySet Name="UserNGOes" EntityType="ngoModel.UserNGO" />
   </EntityContainer>
+  <EntityType Name="UserNGO">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="true" />
+    <Property Name="Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="true" />
+    <Property Name="token" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="true" />
+  </EntityType>
 </Schema>

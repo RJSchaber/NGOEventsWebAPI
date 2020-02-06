@@ -11,18 +11,15 @@ namespace NGOEventsWeb.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.Runtime.Serialization;
-
+    
     public partial class Event
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-
         public Event()
         {
             this.EventRegistrations = new HashSet<EventRegistration>();
         }
-
-        [IgnoreDataMember]
+    
         public int EventID { get; set; }
         public string EventName { get; set; }
         public string EventDescription { get; set; }
@@ -38,7 +35,6 @@ namespace NGOEventsWeb.Models
         public decimal ChildTicket { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        [IgnoreDataMember]
         public virtual ICollection<EventRegistration> EventRegistrations { get; set; }
     }
 }

@@ -18,18 +18,27 @@ namespace NGOEventsWeb.Controllers
     {
         private ngoEntities db = new ngoEntities();
 
-        // GET: api/Events
-        public IQueryable<Event> GetEvents()
+        List<Event> events = new List<Event>();
+
+        public EventsController()
         {
-            db.EventRegistrations = null;
-            return db.Events;
+            foreach(Event @event in db.Events)
+            {
+                events.Add(@event);
+            }
+        }
+
+        // GET: api/Events
+        public List<Event> GetEvents()
+        {
+            return events;
         }
 
         // GET: api/Events/5
         [ResponseType(typeof(Event))]
         public IHttpActionResult GetEvent(int id)
         {
-            Event @event = db.Events.Find(id);
+            Event @event = db.Events.Find(id); //using linq = Event @event = events.Where(x => x.EventID == id).FirstOrDefault();
             if (@event == null)
             {
                 return NotFound();

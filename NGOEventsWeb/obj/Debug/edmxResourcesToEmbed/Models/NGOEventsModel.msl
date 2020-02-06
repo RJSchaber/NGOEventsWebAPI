@@ -50,13 +50,13 @@
     <EntitySetMapping Name="UserNGOes">
       <EntityTypeMapping TypeName="ngoModel.UserNGO">
         <MappingFragment StoreEntitySet="UserNGO">
-          <ScalarProperty Name="UserID" ColumnName="UserID" />
-          <ScalarProperty Name="First_Name" ColumnName="First Name" />
-          <ScalarProperty Name="Last_Name" ColumnName="Last Name" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="Password" ColumnName="Password" />
-          <ScalarProperty Name="Role" ColumnName="Role" />
           <ScalarProperty Name="token" ColumnName="token" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last Name" />
+          <ScalarProperty Name="First_Name" ColumnName="First Name" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

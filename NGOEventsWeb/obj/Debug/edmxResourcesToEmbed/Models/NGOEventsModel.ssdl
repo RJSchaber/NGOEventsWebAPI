@@ -51,7 +51,7 @@
     <Property Name="First Name" Type="varchar" MaxLength="50" />
     <Property Name="Last Name" Type="varchar" MaxLength="50" />
     <Property Name="Email" Type="varchar" MaxLength="50" />
-    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Role" Type="varchar" MaxLength="50" />
     <Property Name="token" Type="varchar" MaxLength="500" />
   </EntityType>

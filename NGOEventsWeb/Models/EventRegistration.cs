@@ -11,11 +11,9 @@ namespace NGOEventsWeb.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.Runtime.Serialization;
-
+    
     public partial class EventRegistration
     {
-        [IgnoreDataMember]
         public int RegistrationID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -24,9 +22,8 @@ namespace NGOEventsWeb.Models
         public string Address { get; set; }
         public Nullable<int> AdultTickets { get; set; }
         public Nullable<int> ChildTickets { get; set; }
-        [IgnoreDataMember]
         public int EventID { get; set; }
-        [IgnoreDataMember]
+    
         public virtual Event Event { get; set; }
     }
 }

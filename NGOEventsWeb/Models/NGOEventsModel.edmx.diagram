@@ -8,8 +8,8 @@
         <EntityTypeShape EntityType="ngoModel.EventRegistration" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="ngoModel.Event" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="ngoModel.UserM" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ngoModel.UserNGO" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
         <AssociationConnector Association="ngoModel.FK__EventRegi__Event__5535A963" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ngoModel.UserNGO" Width="1.5" PointX="0.75" PointY="5.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
